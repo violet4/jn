@@ -7,6 +7,7 @@ environments = [
     Environment(
         directory='~/jupyter-notebooks',
         title='main',
+        ip='localhost',
         port=8888,
     ),
 ]

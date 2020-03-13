@@ -2,7 +2,7 @@ import os
 
 class Environment:
     def __init__(self, directory=None, conda_env=None, title=None, port=None,
-            use_jn_config=True):
+            use_jn_config=True, ip=None):
         self.directory = (
             os.path.expanduser(directory)
             if directory is not None
@@ -11,6 +11,7 @@ class Environment:
         self.conda_env = conda_env
         self.title = title
         self.port = port
+        self.ip = ip
         self.use_jn_config = use_jn_config
 
     def __str__(self):
@@ -40,6 +41,8 @@ class Environment:
         jn_command = "jupyter notebook {}".format(config)
         if self.port is not None:
             jn_command += ' --port={}'.format(self.port)
+        if self.ip is not None:
+            jn_command += ' --ip={}'.format(self.ip)
         commands.append(jn_command)
 
         commands = ' ; '.join(commands)
