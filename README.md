@@ -1,4 +1,7 @@
 # jn
+
+this project was superceded by https://github.com/violet4/beryllium
+
 jupyter notebook launcher and launch manager
 
 write jupyter launch configurations as simple python object instantiations, and then easily launch them using simple command-line options
